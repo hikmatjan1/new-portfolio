@@ -11,3 +11,11 @@
 :root {
     --transition-015s: all ease-in .15s
 }
+
+::-webkit-scrollbar {
+    width: 6px !important;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: slategrey !important;
+}

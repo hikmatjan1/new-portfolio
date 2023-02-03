@@ -1,6 +1,16 @@
 .navbar {
-    /* background-color: silver; */
-    color: #000;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    transition: all ease-in .3s;
+    z-index: 1;
+}
+
+.bg-color {
+    background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)) !important;
 }
 
 .navbar_container {
@@ -36,13 +46,18 @@
     position: relative;
 }
 
+.navbar_container ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
 .navbar_container ul li span {
     font-size: 13px;
 }
 
 .underline {
     position: absolute;
-    bottom: 0;
+    bottom: -5px;
     left: 0;
     right: 0;
     width: 0;
@@ -50,13 +65,9 @@
     transition: var(--transition-015s);
 }
 
-.navbar_container ul li:hover {
-    color: #000;
-}
-
 .navbar_container ul li:hover .underline {
     width: 100%;
-    background-color: #000;
+    background-color: #fff;
 }
 
 
