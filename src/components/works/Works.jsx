@@ -14,13 +14,14 @@ function Works() {
 
         const handlerFunction = (item) => {
             let categoryName = item.querySelector('.category_name').textContent;
+            console.log(categoryName);
             ul_ref.current.querySelector('.activeItem').classList.remove("activeItem");
             item.classList.add("activeItem");
-            if (categoryName === "All") {
+            if (categoryName.split(" ")[0] === "All") {
                 setData(allData);
                 return;
             }
-            setData(allData.filter(element => element.category === categoryName));
+            setData(allData.filter(element => element.category === categoryName.split(" ")[0]));
         }
 
         li.forEach(item => {
@@ -57,19 +58,19 @@ function Works() {
                         <ul ref={ul_ref}>
                             <Zoom left cascade>
                                 <li className='activeItem'>
-                                    <span className='category_name'>All</span>
+                                    <span className='category_name'>All ({allData?.length})</span>
                                     <span className={`underline_item`}></span>
                                 </li>
                                 <li>
-                                    <span className='category_name'>Web App</span>
+                                    <span className='category_name'>Web_App ({allData.filter(item => item.category === "Web_App")?.length})</span>
                                     <span className={`underline_item`}></span>
                                 </li>
                                 <li>
-                                    <span className='category_name'>Template</span>
+                                    <span className='category_name'>Template ({allData.filter(item => item.category === "Template")?.length})</span>
                                     <span className={`underline_item`}></span>
                                 </li>
                                 <li>
-                                    <span className='category_name'>Game</span>
+                                    <span className='category_name'>Game ({allData.filter(item => item.category === "Game")?.length})</span>
                                     <span className={`underline_item`}></span>
                                 </li>
                             </Zoom>

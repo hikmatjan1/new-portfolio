@@ -1,4 +1,3 @@
-
 import dictionary from '../../assets/image/webapp/dictionary.png';
 import calculator from '../../assets/image/webapp/calculator.png';
 import chat from '../../assets/image/webapp/chat.png';
@@ -58,14 +57,14 @@ export const allData = [
     {
         id: Math.random().toString(),
         img: dictionary,
-        category: "Web App",
+        category: "Web_App",
         projectName: "Dictionary",
         url: 'https://english-dictionary.netlify.app',
     },
     {
         id: Math.random().toString(),
         img: calculator,
-        category: "Web App",
+        category: "Web_App",
         projectName: "Calculator",
         url: 'https://calculyator.netlify.app',
     },
@@ -121,35 +120,35 @@ export const allData = [
     {
         id: Math.random().toString(),
         img: qrcode,
-        category: "Web App",
+        category: "Web_App",
         projectName: "QRCode Scanner && Generate",
         url: 'https://qr-code12345.netlify.app/',
     },
     {
         id: Math.random().toString(),
         img: chat,
-        category: "Web App",
+        category: "Web_App",
         projectName: "Chat",
         url: 'https://chat-application-reactjs.netlify.app',
     },
     {
         id: Math.random().toString(),
         img: weather,
-        category: "Web App",
+        category: "Web_App",
         projectName: "Weather",
         url: 'https://weather-application12345.netlify.app',
     },
     {
         id: Math.random().toString(),
         img: stickynotes,
-        category: "Web App",
+        category: "Web_App",
         projectName: "Sticky Notes",
         url: 'https://sticky-notes12345.netlify.app',
     },
     {
         id: Math.random().toString(),
         img: galleryImages,
-        category: "Web App",
+        category: "Web_App",
         projectName: "Gallery Images",
         url: 'https://gallery-images.netlify.app/',
     },
