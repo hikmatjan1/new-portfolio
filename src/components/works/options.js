@@ -17,6 +17,7 @@ import medical from '../../assets/image/template/4.png';
 import weather from '../../assets/image/webapp/weather.png';
 import stickynotes from '../../assets/image/webapp/sticknotes.png';
 import galleryImages from '../../assets/image/webapp/gallery.png';
+import newportfolio from '../../assets/image/template/newportfolio.png';
 
 export const allData = [
     {
@@ -32,6 +33,13 @@ export const allData = [
         category: "Template",
         projectName: "Medical",
         url: 'https://doctor-app-site.netlify.app',
+    },
+    {
+        id: Math.random().toString(),
+        img: newportfolio,
+        category: "Template",
+        projectName: "New Portfolio",
+        url: 'https://my-new-portfolioo.netlify.app/',
     },
     {
         id: Math.random().toString(),
