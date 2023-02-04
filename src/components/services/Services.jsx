@@ -1,26 +1,17 @@
 import React from 'react';
 import Zoom from 'react-reveal/Zoom';
 import { MdOutlineDeveloperMode, MdOutlineDesignServices, MdDesignServices, MdDevices } from 'react-icons/md';
-import styleAbout from '../about/about.module.css';
+import Title from '../about/Title';
 import style from './services.module.css';
 
 function Services() {
     return (
         <>
             <a name="services"></a>
-            <div className={styleAbout.about}>
-                <div className={styleAbout.about_relative}>
-                    <Zoom left>
-                        <h1 >SERVICES</h1>
-                    </Zoom>
-                    <Zoom bottom>
-                        <div className={styleAbout.about_more} >
-                            <h2>What I Do</h2>
-                            <span className={styleAbout.underline}></span>
-                        </div>
-                    </Zoom>
-                </div>
-            </div>
+            <Title
+                back="SERVICES"
+                front="What I Do"
+            />
             <div className={style.services}>
                 <div className="container">
                     <div className="row">

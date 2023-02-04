@@ -81,19 +81,9 @@
 }
 
 .contact_right button {
-    border: none;
-    background-color: #2272f2;
-    padding: 10px;
-    border-radius: 5px;
-    color: #fff;
-    font-size: 16px;
-    align-items: flex-end;
-    transition: var(--transition-015s);
+    font-size: 14px;
 }
 
-.contact_right button:hover {
-    background-color: #2272f2d2;
-}
 
 
 @media (max-width: 378px) {

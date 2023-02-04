@@ -1,40 +1,20 @@
-import React, { useRef } from 'react';
-import Zoom from 'react-reveal/Zoom';
+import React from 'react';
 import { MdPhone, MdAlternateEmail } from 'react-icons/md';
+import Title from '../about/Title';
 import { AiFillGithub } from 'react-icons/ai';
 import { FaTelegramPlane } from 'react-icons/fa';
-import styleAbout from '../about/about.module.css';
 import style from './contact.module.css';
+import Form from './Form';
 
 function Contact() {
-    const email_ref = useRef();
-    const name_ref = useRef();
-    const desc_ref = useRef();
-
-    // submit
-    const submitHandler = (e) => {
-        e.preventDefault();
-
-        // to do server
-
-    }
 
     return (
         <>
             <a name="contact"></a>
-            <div className={styleAbout.about}>
-                <div className={styleAbout.about_relative}>
-                    <Zoom left>
-                        <h1 >CONTACT</h1>
-                    </Zoom>
-                    <Zoom bottom>
-                        <div className={styleAbout.about_more} >
-                            <h2>Get in Touch</h2>
-                            <span className={styleAbout.underline}></span>
-                        </div>
-                    </Zoom>
-                </div>
-            </div>
+            <Title
+                back="CONTACT"
+                front="Get in Touch"
+            />
             <div className={style.contact}>
                 <div className="container">
                     <div className="row mb-5">
@@ -54,36 +34,7 @@ function Contact() {
                         <div className="col-lg-9 mb-3">
                             <div className={style.contact_right}>
                                 <h3 className='mb-4'>SEND US A NOTE</h3>
-                                <form onSubmit={submitHandler}>
-                                    <div className={style.inputs}>
-                                        <input
-                                            type="text"
-                                            placeholder='Name'
-                                            required
-                                            onInvalid={e => e.target.setCustomValidity("Name is required")}
-                                            onChange={e => e.target.setCustomValidity("")}
-                                            ref={name_ref}
-                                        />
-                                        <input
-                                            type="email"
-                                            placeholder='Email'
-                                            required
-                                            onInvalid={e => e.target.setCustomValidity("Email is required")}
-                                            onChange={e => e.target.setCustomValidity("")}
-                                            ref={email_ref}
-                                        />
-                                    </div>
-                                    <textarea
-                                        rows="5"
-                                        required
-                                        onInvalid={e => e.target.setCustomValidity("Description is required")}
-                                        onChange={e => e.target.setCustomValidity("")}
-                                        ref={desc_ref}
-                                    ></textarea>
-                                    <div className={style.buttons}>
-                                        <button type='submit'>Send Message</button>
-                                    </div>
-                                </form>
+                                <Form style={style} />
                             </div>
                         </div>
                     </div>

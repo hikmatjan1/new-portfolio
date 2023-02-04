@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Zoom from 'react-reveal/Zoom';
-import styleAbout from '../about/about.module.css';
+import Title from '../about/Title';
 import { allData } from './options';
 import './works.css';
 
@@ -47,19 +47,10 @@ function Works() {
     return (
         <>
             <a name="works"></a>
-            <div className={styleAbout.about}>
-                <div className={styleAbout.about_relative}>
-                    <Zoom left>
-                        <h1 data-aos="fade-left">PORTFOLIO</h1>
-                    </Zoom>
-                    <Zoom bottom>
-                        <div className={styleAbout.about_more} data-aos="fade-right">
-                            <h2>My Work</h2>
-                            <span className={styleAbout.underline}></span>
-                        </div>
-                    </Zoom>
-                </div>
-            </div>
+            <Title
+                back="PORTFOLIO"
+                front="My Work"
+            />
             <div className={"works mb-5"}>
                 <div className="container">
                     <div className={`mb-5 category`}>
@@ -86,7 +77,7 @@ function Works() {
                     </div>
                     <div className="row mb-5">
                         {data.map(item => (
-                            <Zoom bottom>
+                            <Zoom bottom key={item.id}>
                                 <div className="col-lg-4 mb-3" onClick={() => passToSideFunction(item)}>
                                     <div className={"projects"}>
                                         <img src={item.img} alt="" />

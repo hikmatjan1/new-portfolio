@@ -1,31 +1,18 @@
 import React from 'react';
+import resume from '../../assets/resume Hikmat.pdf';
 import Zoom from 'react-reveal/Zoom';
+import Title from './Title';
 import style from './about.module.css';
-import image from '../../assets/resume Hikmat.pdf';
 
 function About() {
-
-    // download resume
-    const downloadCV = () => {
-        window.open('../../assets/resume Hikmat.pdf');
-    }
 
     return (
         <>
             <a name="about"></a>
-            <div className={style.about}>
-                <div className={style.about_relative}>
-                    <Zoom left>
-                        <h1 >ABOUT ME</h1>
-                    </Zoom>
-                    <Zoom bottom>
-                        <div className={style.about_more} >
-                            <h2>Know Me More</h2>
-                            <span className={style.underline}></span>
-                        </div>
-                    </Zoom>
-                </div>
-            </div>
+            <Title
+                back="ABOUT ME"
+                front="Know Me More"
+            />
             <div className="container mb-5">
                 <div className="row">
                     <Zoom bottom cascade>
@@ -45,22 +32,24 @@ function About() {
                         <div className="col-lg-4">
                             <div className={style.about_right} >
                                 <table className='table table-hover table-striped table-bordered' >
-                                    <tr>
-                                        <td><strong>Name: </strong> Hikmat To'rayev</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>Email: </strong> <a href="thravshanovich@gmail.com">thravshanovich@gmail.com</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>Age: </strong> 28</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>From: </strong> Uzbekistan, Bukhara</td>
-                                    </tr>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Name: </strong> Hikmat To'rayev</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Email: </strong> <a href="thravshanovich@gmail.com">thravshanovich@gmail.com</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Age: </strong> 28</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>From: </strong> Uzbekistan, Bukhara</td>
+                                        </tr>
+                                    </tbody>
                                 </table>
                                 <a
-                                    href="../../assets/resume Hikmat.pdf"
-                                    download="My_File.pdf"
+                                    href={resume}
+                                    download="resume_Hikmat.pdf"
                                     className='btn btn-danger aBtn'
                                 >
                                     Download CV
