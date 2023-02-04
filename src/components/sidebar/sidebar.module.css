@@ -32,6 +32,11 @@
     margin-top: 50px;
 }
 
+.sidebar_list a {
+    text-decoration: none;
+    color: #fff;
+}
+
 .sidebar_list li {
     padding: 10px;
     padding-left: 20px;
@@ -43,6 +48,7 @@
 .sidebar_list li:hover {
     background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4));
     border-left: 3px solid #fff;
+    color: #fff;
 }
 
 @media (max-width: 378px) {

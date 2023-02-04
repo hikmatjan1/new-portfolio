@@ -1,24 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Zoom from 'react-reveal/Zoom';
 import styleAbout from '../about/about.module.css';
+import { allData } from './options';
 import './works.css';
-
-let allData = [
-    {
-        id: Math.random().toString(),
-        img: "https://images.unsplash.com/photo-1553481187-be93c21490a9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Z2FtZXxlbnwwfHwwfHw%3D&w=1000&q=80",
-        category: "Game",
-        projectName: "Puzzle",
-        url: "project url",
-    },
-    {
-        id: Math.random().toString(),
-        img: "https://media.istockphoto.com/id/1334436084/photo/top-down-view-of-colorful-illuminated-gaming-accessories-laying-on-table.jpg?s=612x612&w=0&k=20&c=E9xnbAZoBS5LlUX0q-zxT_3m6gEZpyB2k51_U4LLMNs=",
-        category: "Web App",
-        projectName: "Pizza",
-        url: "project url",
-    },
-];
 
 function Works() {
     const [data, setData] = useState(allData);
@@ -53,9 +37,8 @@ function Works() {
 
     // redirect page
     const passToSideFunction = (data) => {
-        console.log(data);
         let a = document.createElement('a');
-        a.href = "https://www.google.com";
+        a.href = data.url;
         a.target = "_blank";
         a.click();
         a.remove();
@@ -77,7 +60,7 @@ function Works() {
                     </Zoom>
                 </div>
             </div>
-            <div className={"works"}>
+            <div className={"works mb-5"}>
                 <div className="container">
                     <div className={`mb-5 category`}>
                         <ul ref={ul_ref}>

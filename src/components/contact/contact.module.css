@@ -1,0 +1,124 @@
+.contact_left {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.contact_left h3,
+.contact_right h3 {
+    font-size: 22px;
+    font-weight: 400;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.contact_left span {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact_left ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact_left ul li svg {
+    font-size: 24px;
+    transition: var(--transition-015s);
+    cursor: pointer;
+}
+
+.AiFillGithub:hover {
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.FaTelegramPlane:hover {
+    background-color: skyblue;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.inputs {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact_right input {
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    font-size: 16px;
+}
+
+.contact_right textarea {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid lightgray;
+    font-size: 16px;
+}
+
+.contact_right input:focus,
+.contact_right textarea:focus {
+    outline: none;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.contact_right button {
+    border: none;
+    background-color: #2272f2;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    align-items: flex-end;
+    transition: var(--transition-015s);
+}
+
+.contact_right button:hover {
+    background-color: #2272f2d2;
+}
+
+
+@media (max-width: 378px) {
+    .inputs {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact_right button {
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+
+    .contact_left h3,
+    .contact_right h3 {
+        font-size: 18px;
+    }
+
+    .contact_left span {
+        font-size: 16px;
+    }
+
+    .contact_right input,
+    .contact_right textarea {
+        font-size: 14px;
+    }
+}

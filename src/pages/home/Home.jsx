@@ -1,5 +1,7 @@
 import React from 'react';
 import About from '../../components/about/About';
+import Contact from '../../components/contact/Contact';
+import Footer from '../../components/footer/Footer';
 import Navbar from '../../components/navbar/Navbar';
 import RiplesBanner from '../../components/riplesBanner/RiplesBanner';
 import Services from '../../components/services/Services';
@@ -20,6 +22,12 @@ function Home() {
 
             {/* works */}
             <Works />
+
+            {/* contact */}
+            <Contact />
+
+            {/* footer */}
+            <Footer />
         </div>
     )
 }
