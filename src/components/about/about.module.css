@@ -74,14 +74,14 @@
     color: #dc3545;
 }
 
-.about_right button {
+.aBtn {
     padding: 5px;
     font-size: 16px;
     background-color: #2272f2 !important;
     border: none;
 }
 
-.about_right button:hover {
+.aBtn:hover {
     background-color: #2272f2da !important;
 }
 

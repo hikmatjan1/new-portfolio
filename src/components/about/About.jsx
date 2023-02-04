@@ -1,8 +1,15 @@
 import React from 'react';
 import Zoom from 'react-reveal/Zoom';
 import style from './about.module.css';
+import image from '../../assets/resume Hikmat.pdf';
 
 function About() {
+
+    // download resume
+    const downloadCV = () => {
+        window.open('../../assets/resume Hikmat.pdf');
+    }
+
     return (
         <>
             <a name="about"></a>
@@ -51,7 +58,13 @@ function About() {
                                         <td><strong>From: </strong> Uzbekistan, Bukhara</td>
                                     </tr>
                                 </table>
-                                <button type='button' className='btn btn-danger'>Download CV</button>
+                                <a
+                                    href="../../assets/resume Hikmat.pdf"
+                                    download="My_File.pdf"
+                                    className='btn btn-danger aBtn'
+                                >
+                                    Download CV
+                                </a>
                             </div>
                         </div>
                     </Zoom>
